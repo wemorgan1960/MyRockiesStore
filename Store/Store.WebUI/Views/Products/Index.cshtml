@@ -15,10 +15,21 @@
             @Html.DisplayNameFor(model => model.Price)
         </th>
         <th>
+            @Html.DisplayNameFor(model => model.Shipping)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.Category)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Image)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Image2)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Image3)
         </th>
         <th></th>
     </tr>
@@ -32,10 +43,19 @@
             @Html.DisplayFor(modelItem => item.Price)
         </td>
         <td>
+            @Html.DisplayFor(modelItem => item.Shipping)
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.Category)
         </td>
         <td>
-            <img class="img" style="height:100px;padding:5px;margin:5px;border: solid thin whitesmoke" src="~/Content/ProductImages/@item.Image" /> 
+            <img class="img" style="height:100px;padding:5px;margin:5px;border: solid thin whitesmoke" src="~/Content/ProductImages/@item.Image" />
+        </td>
+        <td>
+            <img class="img" style="height:100px;padding:5px;margin:5px;border: solid thin whitesmoke" src="~/Content/ProductImages/@item.Image2" />
+        </td>
+        <td>
+            <img class="img" style="height:100px;padding:5px;margin:5px;border: solid thin whitesmoke" src="~/Content/ProductImages/@item.Image3" />
         </td>
         <td>
             @Html.ActionLink("Add To Cart", "AddToCart", "Products", new { id = item.Id }, new { @class = "btn btn-default" })

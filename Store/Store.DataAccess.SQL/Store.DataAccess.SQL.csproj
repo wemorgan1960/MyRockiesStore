@@ -48,85 +48,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataContext.cs" />
-    <Compile Include="Migrations\201711171506472_initial.cs" />
-    <Compile Include="Migrations\201711171506472_initial.Designer.cs">
-      <DependentUpon>201711171506472_initial.cs</DependentUpon>
+    <Compile Include="Migrations\201802281505142_initial.cs" />
+    <Compile Include="Migrations\201802281505142_initial.Designer.cs">
+      <DependentUpon>201802281505142_initial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201711191446101_AddBasket.cs" />
-    <Compile Include="Migrations\201711191446101_AddBasket.Designer.cs">
-      <DependentUpon>201711191446101_AddBasket.cs</DependentUpon>
+    <Compile Include="Migrations\201802281508058_ImageAndShipping.cs" />
+    <Compile Include="Migrations\201802281508058_ImageAndShipping.Designer.cs">
+      <DependentUpon>201802281508058_ImageAndShipping.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201711201551147_removeVinQuestionFromModel.cs" />
-    <Compile Include="Migrations\201711201551147_removeVinQuestionFromModel.Designer.cs">
-      <DependentUpon>201711201551147_removeVinQuestionFromModel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201801181646493_orderitemcustomer.cs" />
-    <Compile Include="Migrations\201801181646493_orderitemcustomer.Designer.cs">
-      <DependentUpon>201801181646493_orderitemcustomer.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201801231738008_customer.cs" />
-    <Compile Include="Migrations\201801231738008_customer.Designer.cs">
-      <DependentUpon>201801231738008_customer.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201802071546321_order.cs" />
-    <Compile Include="Migrations\201802071546321_order.Designer.cs">
-      <DependentUpon>201802071546321_order.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201802111458066_ordercustomer.cs" />
-    <Compile Include="Migrations\201802111458066_ordercustomer.Designer.cs">
-      <DependentUpon>201802111458066_ordercustomer.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201802111919177_orderRemoveIdentity.cs" />
-    <Compile Include="Migrations\201802111919177_orderRemoveIdentity.Designer.cs">
-      <DependentUpon>201802111919177_orderRemoveIdentity.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201802191734011_answers.cs" />
-    <Compile Include="Migrations\201802191734011_answers.Designer.cs">
-      <DependentUpon>201802191734011_answers.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201802191735310_modelOrderItemCreatedAt.cs" />
-    <Compile Include="Migrations\201802191735310_modelOrderItemCreatedAt.Designer.cs">
-      <DependentUpon>201802191735310_modelOrderItemCreatedAt.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201802191832536_updateOrder.cs" />
-    <Compile Include="Migrations\201802191832536_updateOrder.Designer.cs">
-      <DependentUpon>201802191832536_updateOrder.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201802191929484_userIdOrder.cs" />
-    <Compile Include="Migrations\201802191929484_userIdOrder.Designer.cs">
-      <DependentUpon>201802191929484_userIdOrder.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201802201940459_Updatemodel.cs" />
-    <Compile Include="Migrations\201802201940459_Updatemodel.Designer.cs">
-      <DependentUpon>201802201940459_Updatemodel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201802202158212_RemoveAnswer.cs" />
-    <Compile Include="Migrations\201802202158212_RemoveAnswer.Designer.cs">
-      <DependentUpon>201802202158212_RemoveAnswer.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201802230222098_datetimeOffsetOrder.cs" />
-    <Compile Include="Migrations\201802230222098_datetimeOffsetOrder.Designer.cs">
-      <DependentUpon>201802230222098_datetimeOffsetOrder.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201802230226229_datetimeOff.cs" />
-    <Compile Include="Migrations\201802230226229_datetimeOff.Designer.cs">
-      <DependentUpon>201802230226229_datetimeOff.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201802230238201_datetimeOffOrder.cs" />
-    <Compile Include="Migrations\201802230238201_datetimeOffOrder.Designer.cs">
-      <DependentUpon>201802230238201_datetimeOffOrder.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201802230245032_removeCompletedAtOrder.cs" />
-    <Compile Include="Migrations\201802230245032_removeCompletedAtOrder.Designer.cs">
-      <DependentUpon>201802230245032_removeCompletedAtOrder.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201802231305157_dateNullable.cs" />
-    <Compile Include="Migrations\201802231305157_dateNullable.Designer.cs">
-      <DependentUpon>201802231305157_dateNullable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201802270211574_updateProduct.cs" />
-    <Compile Include="Migrations\201802270211574_updateProduct.Designer.cs">
-      <DependentUpon>201802270211574_updateProduct.cs</DependentUpon>
+    <Compile Include="Migrations\201802281553088_changeToArt.cs" />
+    <Compile Include="Migrations\201802281553088_changeToArt.Designer.cs">
+      <DependentUpon>201802281553088_changeToArt.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -137,68 +69,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201711171506472_initial.resx">
-      <DependentUpon>201711171506472_initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201711191446101_AddBasket.resx">
-      <DependentUpon>201711191446101_AddBasket.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201711201551147_removeVinQuestionFromModel.resx">
-      <DependentUpon>201711201551147_removeVinQuestionFromModel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201801181646493_orderitemcustomer.resx">
-      <DependentUpon>201801181646493_orderitemcustomer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201801231738008_customer.resx">
-      <DependentUpon>201801231738008_customer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201802071546321_order.resx">
-      <DependentUpon>201802071546321_order.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201802111458066_ordercustomer.resx">
-      <DependentUpon>201802111458066_ordercustomer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201802111919177_orderRemoveIdentity.resx">
-      <DependentUpon>201802111919177_orderRemoveIdentity.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201802191734011_answers.resx">
-      <DependentUpon>201802191734011_answers.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201802191735310_modelOrderItemCreatedAt.resx">
-      <DependentUpon>201802191735310_modelOrderItemCreatedAt.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201802191832536_updateOrder.resx">
-      <DependentUpon>201802191832536_updateOrder.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201802191929484_userIdOrder.resx">
-      <DependentUpon>201802191929484_userIdOrder.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201802201940459_Updatemodel.resx">
-      <DependentUpon>201802201940459_Updatemodel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201802202158212_RemoveAnswer.resx">
-      <DependentUpon>201802202158212_RemoveAnswer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201802230222098_datetimeOffsetOrder.resx">
-      <DependentUpon>201802230222098_datetimeOffsetOrder.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201802230226229_datetimeOff.resx">
-      <DependentUpon>201802230226229_datetimeOff.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201802230238201_datetimeOffOrder.resx">
-      <DependentUpon>201802230238201_datetimeOffOrder.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201802230245032_removeCompletedAtOrder.resx">
-      <DependentUpon>201802230245032_removeCompletedAtOrder.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201802231305157_dateNullable.resx">
-      <DependentUpon>201802231305157_dateNullable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201802270211574_updateProduct.resx">
-      <DependentUpon>201802270211574_updateProduct.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\Store.Core\Store.Core.csproj">
       <Project>{be83d816-e35f-4eee-9e68-176be911e71e}</Project>
       <Name>Store.Core</Name>
@@ -207,6 +77,17 @@
       <Project>{004bfc97-5706-4afc-bf28-9613b0a3eec5}</Project>
       <Name>Store.DataAccess.InMemory</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201802281505142_initial.resx">
+      <DependentUpon>201802281505142_initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802281508058_ImageAndShipping.resx">
+      <DependentUpon>201802281508058_ImageAndShipping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802281553088_changeToArt.resx">
+      <DependentUpon>201802281553088_changeToArt.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

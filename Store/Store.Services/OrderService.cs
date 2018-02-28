@@ -25,8 +25,6 @@ namespace Store.Services
                     Price = item.Price,
                     ProductName = item.ProductName,
                     Quanity = item.Quanity,
-                    Vin=item.Vin,
-                    Question=item.Question,
 
                 });
             }

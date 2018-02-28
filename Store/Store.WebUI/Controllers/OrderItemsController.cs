@@ -88,10 +88,6 @@ namespace Store.WebUI.Controllers
                     return View(orderItem);
                 }
 
-                orderItemToEdit.AnswerSubject = orderItem.AnswerSubject;
-                orderItemToEdit.AnswerContent = orderItem.AnswerContent;
-                orderItemToEdit.AnswerTags = orderItem.AnswerTags;
-                orderItemToEdit.AnswerCompleted = DateTime.Now;
 
                 orderItemsContext.Commit();
 
@@ -101,8 +97,8 @@ namespace Store.WebUI.Controllers
                 var subject = "Store.com Order has been Answered: " + orderItem.OrderId;
                 var fromAddress = "admin@askyourmechanicdon.com";
                 var toAddress = CustomerEmail;
-                var emailBody = "Email From: Store.com Message: the answer to your order: " 
-                    + orderItem.Question + " " + orderItem.AnswerContent;
+                var emailBody = "Email From: Store.com Message: the answer to your order: ";
+
 
                 var smtp = new SmtpClient();
                 {

@@ -34,10 +34,10 @@ namespace Store.WebUI.Controllers
         }
         [Authorize(Roles = RoleName.AskAdmin + "," + RoleName.AskUser)]
         [HttpPost]
-        public ActionResult AddToBasket(string Id, string vin, string question)
+        public ActionResult AddToBasket(string Id)
         {
             ViewBag.IsIndexHome = false;
-            basketService.AddToBasket(this.HttpContext, Id, vin, question);
+            basketService.AddToBasket(this.HttpContext, Id);
 
             return RedirectToAction("Index","Products");
         }
@@ -108,7 +108,7 @@ namespace Store.WebUI.Controllers
             {
                 OrderNumber = Common.GetRandomInvoiceNumber()
             };
-            order.InvoiceNumber = "AskDon" + @DateTime.Now.Year + order.OrderNumber;
+            order.InvoiceNumber = "Shop.MyRockies.Network" + @DateTime.Now.Year + order.OrderNumber;
             order.OrderStatus = "Order Created";
             orderService.CreateOrder(order, basketItems);
             order.OrderStatus = "Payment Processed";
@@ -125,11 +125,11 @@ namespace Store.WebUI.Controllers
 
             var smtp = new SmtpClient();
             {
-                smtp.Host = "smtp.askyourmechanicdon.com";
+                smtp.Host = "smtp.myrockies.network";
                 smtp.Port = 587;
                 smtp.EnableSsl = false;
                 smtp.DeliveryMethod = System.Net.Mail.SmtpDeliveryMethod.Network;
-                smtp.Credentials = new NetworkCredential("admin@askyourmechanicdon.com", "TtLUVAz5");
+                smtp.Credentials = new NetworkCredential("admin@myrockies.network", "TtLUVAz5");
                 smtp.Timeout = 20000;
             }
 

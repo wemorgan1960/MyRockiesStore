@@ -66,7 +66,7 @@ namespace Store.Services
 
             return basket;
         }
-        public void AddToBasket(HttpContextBase httpContext, string productId, string vin, string question)
+        public void AddToBasket(HttpContextBase httpContext, string productId)
         {
             if(productId != null)
             {
@@ -79,8 +79,6 @@ namespace Store.Services
                     {
                         BasketId = basket.Id,
                         ProductId = productId,
-                        Vin = vin,
-                        Question = question,
                         Quanity = 1
                     };
                     basket.BasketItems.Add(item);
@@ -119,10 +117,11 @@ namespace Store.Services
                                   Id = b.Id,
                                   Quanity = b.Quanity,
                                   ProductName = p.Name,
-                                  Vin = b.Vin,
-                                  Question = b.Question,
                                   Image = p.Image,
-                                  Price = p.Price
+                                  Image2=p.Image2,
+                                  Image3=p.Image3,
+                                  Price = p.Price,
+                                  Shipping=p.Shipping
                               }).ToList();
                 return results;
             }

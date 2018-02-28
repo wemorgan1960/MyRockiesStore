@@ -7,13 +7,13 @@ namespace AskYourMechanicDon.DataAccess.SQL.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class updateOrder : IMigrationMetadata
+    public sealed partial class changeToArt : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(updateOrder));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(changeToArt));
         
         string IMigrationMetadata.Id
         {
-            get { return "201802191832536_updateOrder"; }
+            get { return "201802281553088_changeToArt"; }
         }
         
         string IMigrationMetadata.Source

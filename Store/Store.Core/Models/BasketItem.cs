@@ -11,7 +11,7 @@ namespace Store.Core.Models
         public string BasketId { get; set; }
         public string ProductId { get; set; }
         public int Quanity { get; set; }
-        public string Vin { get; set; }
-        public string Question { get; set; }
+        public decimal Price { get; set; }
+        public decimal Shipping { get; set; }
     }
 }

@@ -7,13 +7,13 @@ namespace AskYourMechanicDon.DataAccess.SQL.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class removeCompletedAtOrder : IMigrationMetadata
+    public sealed partial class ImageAndShipping : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(removeCompletedAtOrder));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(ImageAndShipping));
         
         string IMigrationMetadata.Id
         {
-            get { return "201802230245032_removeCompletedAtOrder"; }
+            get { return "201802281508058_ImageAndShipping"; }
         }
         
         string IMigrationMetadata.Source

@@ -31,7 +31,7 @@ namespace Store.WebUI.Controllers
         public ActionResult Contact()
         {
             ViewBag.IsIndexHome = false;
-            ViewBag.Message = "askyourmechanicdon.com contact page.";
+            ViewBag.Message = "shop.Myrockies.network contact page.";
 
             return View();
         }
@@ -45,16 +45,16 @@ namespace Store.WebUI.Controllers
                 var subject = "Store.com Contact Form Email";
                 var body = "<p>Email From: {0} ({1})</p><p>Message:</p><p>{2}</p>";
                 var fromAddress = model.FromEmail;
-                var toAddress = "admin@askyourmechanicdon.com";
+                var toAddress = "admin@myrockies.network";
                 var emailBody = string.Format(body, model.FromName, model.FromEmail, model.Message);
 
                 var smtp = new SmtpClient();
                 {
-                    smtp.Host = "smtp.askyourmechanicdon.com";
+                    smtp.Host = "smtp.admin@myrockies.network";
                     smtp.Port = 587;
                     smtp.EnableSsl = false;
                     smtp.DeliveryMethod = System.Net.Mail.SmtpDeliveryMethod.Network;
-                    smtp.Credentials = new NetworkCredential("admin@askyourmechanicdon.com", "TtLUVAz5");
+                    smtp.Credentials = new NetworkCredential("admin@myrockies.network", "TtLUVAz5");
                     smtp.Timeout = 20000;
                 }
 

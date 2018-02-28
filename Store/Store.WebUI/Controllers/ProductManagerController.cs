@@ -82,7 +82,7 @@ namespace Store.WebUI.Controllers
             }
         }
         [HttpPost]
-        public ActionResult Edit(Product product, string Id, HttpPostedFileBase file)
+        public ActionResult Edit(Product product, string Id, HttpPostedFileBase file,HttpPostedFileBase file2, HttpPostedFileBase file3)
         {
             ViewBag.IsIndexHome = false;
             Product productToEdit = context.Find(Id);
@@ -102,10 +102,24 @@ namespace Store.WebUI.Controllers
                     productToEdit.Image = product.Id + Path.GetExtension(file.FileName);
                     file.SaveAs(Server.MapPath("//Content//ProductImages//") + productToEdit.Image);
                 }
+
+                if (file != null)
+                {
+                    productToEdit.Image2 = product.Id + Path.GetExtension(file2.FileName);
+                    file.SaveAs(Server.MapPath("//Content//ProductImages//") + productToEdit.Image2);
+                }
+
+                if (file3 != null)
+                {
+                    productToEdit.Image3 = product.Id + Path.GetExtension(file3.FileName);
+                    file.SaveAs(Server.MapPath("//Content//ProductImages//") + productToEdit.Image3);
+                }
+
                 productToEdit.Category = product.Category;
                 productToEdit.Description = product.Description;
                 productToEdit.Name = product.Name;
                 productToEdit.Price = product.Price;
+                productToEdit.Shipping = product.Shipping;
 
                 context.Commit();
 

@@ -1,0 +1,49 @@
+﻿<!--Main nav begin-->
+<nav class="navbar navbar-inverse navbar-static-top sticky">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            @*<a class="navbar-brand" href="#"><img src="" alt=""></a>*@
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+
+            <ul class="nav navbar-nav  navbar-right">
+
+                <li>@Html.ActionLink("Home", "Products", "Home")</li>
+                @Html.Partial("_LoginPartial")
+                @{
+                    Html.RenderAction("BasketSummary", "Basket");
+                }
+                @if (Request.IsAuthenticated && (User.IsInRole("AskUser") || User.IsInRole("AskAdmin")))
+                {
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown">Profile <b class="caret"></b></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li role="menuitem">@Html.ActionLink("Profile", "Details", "Customer")</li>
+                            <li role="menuitem">@Html.ActionLink("Orders", "Orders", "Order")</li>
+                        </ul>
+                    </li>
+                }
+                @if (Request.IsAuthenticated && User.IsInRole("AskAdmin"))
+                {
+                    <li>@Html.ActionLink("Admin", "Index", "Admin")</li>
+                }
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li role="menuitem">@Html.ActionLink("About", "About", "Home")</li>
+                        <li role="menuitem">@Html.ActionLink("Disclaimer", "Disclaimer", "Home")</li>
+                        <li role="menuitem">@Html.ActionLink("Contact Us", "Contact", "Home")</li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!--/.nav-collapse -->
+        @*<button type="button" class="navbar-toggle side-panel" data-toggle="offcanvas" data-target=".navmenu" data-canvas="body"><i class="ti-menu-alt"></i></button>*@
+    </div><!--/.container -->
+</nav>
+<!--Main nav end-->

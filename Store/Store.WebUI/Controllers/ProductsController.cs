@@ -69,10 +69,6 @@ namespace Store.WebUI.Controllers
         {
             ViewBag.IsIndexHome = false;
 
-            string vin = product.VIN;
-            string question = product.Question;
-
-
             basketService.AddToBasket(this.HttpContext, Id);
 
 

@@ -1480,14 +1480,14 @@ Footer light styles
 }
 
 .no-padding.img {
-  background: url(../img/showcase-1.jpg) scroll center no-repeat;
+  background: url(../img/IMG_20180201_093534.jpg) scroll center no-repeat;
   background-size: cover;
   position: absolute;
   height: 100%;
 }
 
 .no-padding.img-2 {
-  background: url(../img/showcase-2.jpg) scroll center no-repeat;
+  background: url(../img/IMG_20180201_093534.jpg) scroll center no-repeat;
   background-size: cover;
   position: absolute;
   height: 100%;
@@ -1644,19 +1644,19 @@ Carousel slider
 }
 
 #carousel-slide-1 {
-  background-image: url(../img/bg-1.jpg);
+  background-image: url(../img/IMG_20180201_093534.jpg);
   width: 100%;
   background-size: cover;
 }
 
 #carousel-slide-2 {
-  background-image: url(../img/bg-2.jpg);
-  width: 100%;
-  background-size: cover;
+    background-image: url(../img/IMG_20180201_093534.jpg);
+    width: 100%;
+    background-size: cover;
 }
 
 #carousel-slide-3 {
-  background-image: url(../img/bg-3.jpg);
+  background-image: url(../img/IMG_20180201_093534.jpg);
   width: 100%;
   background-size: cover;
 }
@@ -1902,7 +1902,7 @@ a.carousel-control {
 
 /*******************home parallax-bg----***********************/
 #home-parallax {
-  background: url("../img/showcase-4.jpg") no-repeat;
+  background: url("../img/IMG_20180201_093534.jpg") no-repeat;
   padding: 190px 0;
 }
 
@@ -2832,7 +2832,7 @@ ul.post-desc li + li {
 }
 /*testimonials parallax*/
 .testimonials {
-  background: url(../img/bg-4.jpg) no-repeat;
+  background: url(../img/IMG_20180201_093534.jpg) no-repeat;
   padding: 80px 0;
 }
 
@@ -3151,7 +3151,7 @@ ul.post-desc li + li {
 
 /****fun facts*****/
 .fun-fact-wrap {
-  background: url(../img/showcase-4.jpg);
+  background: url(../img/IMG_20180201_093534.jpg);
   background-repeat: repeat !important;
   padding-top: 100px;
   padding-bottom: 70px;
@@ -3204,7 +3204,7 @@ ul.post-desc li + li {
 
 /**********static background with transparent header*/
 .static-bg {
-  background: url(../img/showcase-3.jpg);
+  background: url(../img/IMG_20180201_093534.jpg);
   padding-top: 230px;
   padding-bottom: 200px;
 }
@@ -3260,7 +3260,7 @@ ul.post-desc li + li {
   padding: 60px 0;
   background-position: center center;
   background-repeat: no-repeat;
-  background: url(../img/showcase-1.jpg) no-repeat center center;
+  background: url(../img/IMG_20180201_093534.jpg) no-repeat center center;
 }
 
 .breadcrumb-wrap h4 {
@@ -3530,7 +3530,7 @@ ol.breadcrumb li a {
 
 /***************about me*********************/
 .me-intro {
-  background: url(../img/bg-4.jpg);
+  background: url(../img/IMG_20180201_093534.jpg);
   padding: 200px 0;
 }
 
@@ -5461,7 +5461,7 @@ body.invoice {
 }
 
 .constro-cta {
-  background: url(../img/construction/constro-bg-2.jpg);
+  background: url(../img/construction/IMG_20180201_093534.jpg);
   padding: 80px 0;
   text-align: center;
 }
@@ -5960,7 +5960,7 @@ UNDER CUNSTRUCTION PAGES v1.9
 
 ***********************/
 .coming-soon {
-  background: url(../img/bg-3.jpg);
+  background: url(../img/IMG_20180201_093534.jpg);
   padding: 100px 0;
   position: relative;
   background-repeat: no-repeat;
@@ -6058,7 +6058,7 @@ body.coming-soon-full {
 
 .coming-soon-fullscreen {
   width: 100%;
-  background: url(../img/bg-4.jpg);
+  background: url(../img/IMG_20180201_093534.jpg);
   background-attachment: fixed;
   background-position: 0 0;
   background-size: cover;

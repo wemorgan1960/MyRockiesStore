@@ -119,7 +119,6 @@ namespace Store.Services
                                   ProductName = p.Name,
                                   Image = p.Image,
                                   Image2=p.Image2,
-                                  Image3=p.Image3,
                                   Price = p.Price,
                                   Shipping=p.Shipping
                               }).ToList();

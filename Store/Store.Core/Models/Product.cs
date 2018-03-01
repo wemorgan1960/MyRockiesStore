@@ -13,15 +13,17 @@ namespace Store.Core.Models
         [StringLength(50)]
         [DisplayName("Product Name")]
         public string Name { get; set; }
+        public string Size { get; set; }
+        public string Location { get; set; }
         public string Description { get; set; }
         public decimal Price { get; set; }
         public decimal Shipping { get; set; }
+        public string ShippingTerms { get; set; }
         public string Category { get; set; }
         public string Image { get; set; }
         public string Image2 { get; set; }
-        public string Image3 { get; set; }
-        public string VIN { get; set; }
-        public string Question { get; set; }
+        public  Boolean Sold { get; set; }
+        public Nullable<DateTime> DateSold { get; set; }
 
     }
 }

@@ -41,7 +41,7 @@ namespace Store.WebUI.Controllers
             return View(viewModel);
         }
         [HttpPost]
-        public ActionResult Create(Product product, HttpPostedFileBase file)
+        public ActionResult Create(Product product, HttpPostedFileBase file, HttpPostedFileBase file2)
         {
             ViewBag.IsIndexHome = false;
             if (!ModelState.IsValid)
@@ -56,6 +56,13 @@ namespace Store.WebUI.Controllers
                     product.Image = product.Id + Path.GetExtension(file.FileName);
                     file.SaveAs(Server.MapPath("//Content//ProductImages//") + product.Image);
                 }
+
+                if (file2 != null)
+                {
+                    product.Image = product.Id + Path.GetExtension(file2.FileName);
+                    file.SaveAs(Server.MapPath("//Content//ProductImages//") + product.Image2);
+                }
+
                 context.Insert(product);
                 context.Commit();
 
@@ -82,7 +89,7 @@ namespace Store.WebUI.Controllers
             }
         }
         [HttpPost]
-        public ActionResult Edit(Product product, string Id, HttpPostedFileBase file,HttpPostedFileBase file2, HttpPostedFileBase file3)
+        public ActionResult Edit(Product product, string Id, HttpPostedFileBase file,HttpPostedFileBase file2)
         {
             ViewBag.IsIndexHome = false;
             Product productToEdit = context.Find(Id);
@@ -103,23 +110,20 @@ namespace Store.WebUI.Controllers
                     file.SaveAs(Server.MapPath("//Content//ProductImages//") + productToEdit.Image);
                 }
 
-                if (file != null)
+                if (file2 != null)
                 {
                     productToEdit.Image2 = product.Id + Path.GetExtension(file2.FileName);
                     file.SaveAs(Server.MapPath("//Content//ProductImages//") + productToEdit.Image2);
                 }
 
-                if (file3 != null)
-                {
-                    productToEdit.Image3 = product.Id + Path.GetExtension(file3.FileName);
-                    file.SaveAs(Server.MapPath("//Content//ProductImages//") + productToEdit.Image3);
-                }
-
-                productToEdit.Category = product.Category;
-                productToEdit.Description = product.Description;
                 productToEdit.Name = product.Name;
+                productToEdit.Size = product.Size;
+                productToEdit.Location = product.Location;
+                productToEdit.Description = product.Description;
                 productToEdit.Price = product.Price;
                 productToEdit.Shipping = product.Shipping;
+                productToEdit.ShippingTerms = product.ShippingTerms;
+                productToEdit.Category = product.Category;
 
                 context.Commit();
 

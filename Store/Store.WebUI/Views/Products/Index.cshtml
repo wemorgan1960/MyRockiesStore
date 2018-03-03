@@ -22,6 +22,9 @@
             @Html.DisplayNameFor(model => model.Description)
         </th>
         <th>
+            @Html.DisplayNameFor(model => model.Size)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.Price)
         </th>
         <th>
@@ -34,36 +37,52 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            <img class="img" style="height:100px;padding:5px;margin:5px;border: solid thin whitesmoke" src="~/Content/ProductImages/@item.Image" />
-        </td>
-        <td>
-            <img class="img" style="height:100px;padding:5px;margin:5px;border: solid thin whitesmoke" src="~/Content/ProductImages/@item.Image2" />
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Description)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Price)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Shipping)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Category)
-        </td>
-        <td>
-            @Html.ActionLink("Details", "Details", "Products", new { id = item.Id }, new { @class = "btn btn-default" })
-        </td>
-        <td>
-            @Html.ActionLink("Add To Cart", "AddToCart", "Products", new { id = item.Id }, new { @class = "btn btn-default" })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                <img class="img" style="height:150px;padding:5px;margin:5px;border: solid thin whitesmoke" src="~/Content/ProductImages/@item.Image" />
+            </td>
+            <td>
+                <img class="img" style="height:150px;padding:5px;margin:5px;border: solid thin whitesmoke" src="~/Content/ProductImages/@item.Image2" />
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Size)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price) ($CDN)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Shipping) ($CDN)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Category)
+            </td>
+            @{if (item.PendingSold != true)
+                {
+                    <td>
+                        @Html.ActionLink("Details", "Details", "Products", new { id = item.Id }, new { @class = "btn btn-default" })
+                    </td>
+                    <td>
+                        @Html.ActionLink("Add To Cart", "AddToCart", "Products", new { id = item.Id }, new { @class = "btn btn-default" })
+                    </td>
+                }
+                else
+                {
+                    <td>
+                        <strong class="sold">Sorry the Item is Pending Sold</strong>
+                    </td>
+                    <td></td>
+
+                }
+            }
+        </tr>
+    }
 
 </table>

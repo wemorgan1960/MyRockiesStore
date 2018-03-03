@@ -12,16 +12,13 @@
             @Html.DisplayNameFor(model => model.ProductName)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Vin)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Question)
-        </th>
-        <th>
             @Html.DisplayNameFor(model => model.Quanity)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Shipping)
         </th>
         <th>
             Line Total
@@ -31,29 +28,26 @@
 
     @foreach (var item in Model)
     {
-        <tr>
-            <td><img class="img" src="~/Content/ProductImages/@item.Image" style="height:50px" /></td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ProductName)
-            </td>
+    <tr>
+        <td><img class="img" src="~/Content/ProductImages/@item.Image" style="height:100px" /></td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProductName)
+        </td>
 
-            <td>
-                @Html.DisplayFor(modelItem => item.Vin)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Question)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Quanity)
-            </td>
-            <td>
-                @String.Format("{0:c}", item.Price)
-            </td>
-            <td>
-                @String.Format("{0:c}", item.Price * item.Quanity)
-            </td>
-        </tr>
-        gTotal = gTotal + item.Price;
+        <td>
+            @Html.DisplayFor(modelItem => item.Quanity)
+        </td>
+        <td>
+            @String.Format("{0:c}", item.Price) ($CDN)
+        </td>
+        <td>
+            @String.Format("{0:c}", item.Shipping) ($CDN)
+        </td>
+        <td>
+            @String.Format("{0:c}", item.Price + item.Shipping) ($CDN)
+        </td>
+    </tr>
+        gTotal = gTotal + item.Price + item.Shipping;
 
     }
     <tr>
@@ -63,21 +57,22 @@
         <td></td>
         <td></td>
         <td></td>
-        <td class="grandtotal"><b>Grand total</b> Canadian Dollars $<span><b>@gTotal</b></span></td>
+        <td class="grandtotal"><b>Grand total Canadian Dollars $<span>@gTotal</span></b></td>
     </tr>
 </table>
 <div class="paypaldiv">
-    <form class="paypalform" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+    <form class="paypalform" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
         <input type="hidden" name="cmd" value="_cart">
-        <input type="hidden" name="hosted_button_id" value="ENLYF2UB52CTE">
+        <input type="hidden" name="hosted_button_id" value="MZ6CQSV3TMCHL">
         <input type="hidden" name="upload" value="1">
-        <input type="hidden" name="business" value="bmorgan@telusplanet.net">
+        <input type="hidden" name="business" value="bmorgan-faciliator@telusplanet.net">
 
         @foreach (var item in Model)
         {
             <input type="hidden" name="item_name_@count" value="@item.ProductName">
             <input type="hidden" name="amount_@count" value="@item.Price">
             <input type="hidden" name="quantity_@count" value="@item.Quanity">
+            <input type="hidden" name="shipping_@count" value="@item.Shipping" />
             count++;
         }
 

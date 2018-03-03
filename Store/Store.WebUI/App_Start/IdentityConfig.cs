@@ -23,17 +23,17 @@ namespace Store.WebUI
             // Plug in your email service here to send an email.
             var subject = message.Subject;
             var body = message.Body;
-            var fromAddress = "admin@askyourmechanicdon.com";
+            var fromAddress = "admin@myrockies.network";
             var toAddress = message.Destination;
 
 
             var smtp = new SmtpClient();
             {
-                smtp.Host = "smtp.askyourmechanicdon.com";
+                smtp.Host = "smtp.myrockies.network";
                 smtp.Port = 587;
                 smtp.EnableSsl = false;
                 smtp.DeliveryMethod = System.Net.Mail.SmtpDeliveryMethod.Network;
-                smtp.Credentials = new NetworkCredential("admin@askyourmechanicdon.com", "TtLUVAz5");
+                smtp.Credentials = new NetworkCredential("admin@myrockies.network", "bdFawHs7");
                 smtp.Timeout = 20000;
             }
 

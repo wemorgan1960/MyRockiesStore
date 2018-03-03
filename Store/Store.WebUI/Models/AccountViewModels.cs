@@ -66,6 +66,7 @@ namespace Store.WebUI.Models
     {
         [Required]
         [EmailAddress]
+        [Key]
         [Display(Name = "Email")]
         public string Email { get; set; }
 

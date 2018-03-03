@@ -26,7 +26,7 @@ namespace Store.WebUI.Controllers
         {
             ViewBag.IsIndexHome = false;
 
-            List<Product> products = context.Collection().ToList();
+            List<Product> products = context.Collection().Where(p => p.Sold != true).ToList();
 
             return View(products);
         }
@@ -70,7 +70,6 @@ namespace Store.WebUI.Controllers
             ViewBag.IsIndexHome = false;
 
             basketService.AddToBasket(this.HttpContext, Id);
-
 
             return RedirectToAction("Index");
 

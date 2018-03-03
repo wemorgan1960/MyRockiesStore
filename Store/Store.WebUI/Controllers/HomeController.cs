@@ -10,8 +10,8 @@ namespace Store.WebUI.Controllers
         public ActionResult Index()
         {
             ViewBag.IsIndexHome = true;
+            return View();
             //return RedirectToAction("UnderConstruction");
-            return View() ;
         }
         public ActionResult About()
         {
@@ -50,11 +50,11 @@ namespace Store.WebUI.Controllers
 
                 var smtp = new SmtpClient();
                 {
-                    smtp.Host = "smtp.admin@myrockies.network";
+                    smtp.Host = "smtp.myrockies.network";
                     smtp.Port = 587;
                     smtp.EnableSsl = false;
                     smtp.DeliveryMethod = System.Net.Mail.SmtpDeliveryMethod.Network;
-                    smtp.Credentials = new NetworkCredential("admin@myrockies.network", "TtLUVAz5");
+                    smtp.Credentials = new NetworkCredential("admin@myrockies.network", "bdFawHs7");
                     smtp.Timeout = 20000;
                 }
 

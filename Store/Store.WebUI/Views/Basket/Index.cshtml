@@ -11,16 +11,10 @@
             @Html.DisplayNameFor(model => model.ProductName)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Vin)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Question)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Quanity)
-        </th>
-        <th>
             @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Shipping)
         </th>
         <th>
             Line Total
@@ -35,27 +29,17 @@
             <td>
                 @Html.DisplayFor(modelItem => item.ProductName)
             </td>
-
-            <td>
-                @Html.DisplayFor(modelItem => item.Vin)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Question)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Quanity)
-            </td>
             <td>
                 @String.Format("{0:c}", item.Price)
             </td>
             <td>
-                @String.Format("{0:c}", item.Price * item.Quanity)
+                @String.Format("{0:c}", item.Shipping)
             </td>
             <td>
                 <a href="@Url.Action("RemoveFromBasket","Basket", new { id = item.Id })" class="btn btn-default"><span>Delete</span><i class="icon-angle-right"></i></a>
             </td>
         </tr>
-        gTotal = gTotal + item.Price;
+        gTotal = gTotal + item.Price + item.Shipping;
 
     }
     <tr>
@@ -65,7 +49,7 @@
         <td></td>
         <td></td>
         <td></td>
-        <td class="grandtotal"><b>Grand total</b>Canadian Dollars $<span><b>@gTotal</b></span></td>
+        <td class="grandtotal"><b>Grand Total Canadian Dollars $<span>@gTotal</span></b></td>
     </tr>
 </table>
 <a href="@Url.Action("Checkout","Basket")" class="placeorder btn btn-primary pull-right">Checkout</a>

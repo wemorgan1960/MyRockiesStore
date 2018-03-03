@@ -22,7 +22,8 @@ namespace Store.Core.Models
         public string Category { get; set; }
         public string Image { get; set; }
         public string Image2 { get; set; }
-        public  Boolean Sold { get; set; }
+        public Boolean PendingSold { get; set; }
+        public Boolean Sold { get; set; }
         public Nullable<DateTime> DateSold { get; set; }
 
     }

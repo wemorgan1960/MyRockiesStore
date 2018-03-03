@@ -33,21 +33,32 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
+
 <body>
-    @if (!ViewBag.IsIndexHome)
-    {
-        @Html.Partial("_HeaderToolBar")
-    }
+    <main>
+        <header>
+            @if (!ViewBag.IsIndexHome)
+            {
+                @Html.Partial("_HeaderToolBar")
+            }
+        </header>
+        @RenderBody()
 
-    @RenderBody()
+		<footer>
+            @if (!ViewBag.IsIndexHome)
+            {
+                @Html.Partial("_FooterToolBar")
+            }
 
-    @if (!ViewBag.IsIndexHome)
-    {
-        @Html.Partial("_FooterToolBar")
-    }
-    <div id="back-to-top">
-        <a href="#top"><i class="fa fa-angle-up"></i></a>
-    </div>
+        </footer>
+        <div id="back-to-top">
+            <a href="#top"><i class="fa fa-angle-up"></i></a>
+        </div>
+    </main>
+
+
+
+
     <!-- jQuery-->
     <script src="~/Theme/js/jquery.min.js"></script>
     <script src="~/Theme/js/jquery-migrate.min.js"></script>

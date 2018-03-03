@@ -7,92 +7,80 @@
 <h2>Details</h2>
 
 <div>
-    <h4>Product</h4>
     <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
+    <div class="col-lg-push-4">
+        <img class="img" style="height:400px;padding:5px;margin:5px;border: solid thin whitesmoke" src="~/Content/ProductImages/@Model.Image") />
+        <img class="img" style="height:400px;padding:5px;margin:5px;border: solid thin whitesmoke" src="~/Content/ProductImages/@Model.Image2") />
+        <dl class="dl-horizontal">
+            <dt>
+                Study Name
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Name)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Name)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Size)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Size)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Size)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Size)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Location)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Location)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Location)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Location)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Description)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Description)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Description)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Description)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Price)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Price)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Price)
-        </dd>
+            <dd>
+                $@Html.DisplayFor(model => model.Price) ($CDN)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Shipping)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Shipping)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Shipping)
-        </dd>
+            <dd>
+                $@Html.DisplayFor(model => model.Shipping) ($CDN)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.ShippingTerms)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.ShippingTerms)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.ShippingTerms)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.ShippingTerms)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Category)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Category)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Category)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Category)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Image)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Image)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Image2)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Image2)
-        </dd>
-        <dd>
-            @Html.ActionLink("Add To Cart", "AddToCart", "Products", new { id = Model.Id }, new { @class = "btn btn-default" })
-        </dd>
-    </dl>
+            <dd>
+                @Html.ActionLink("Add To Cart", "AddToCart", "Products", new { id = Model.Id }, new { @class = "btn btn-default" })
+            </dd>
+        </dl>
+    </div>
 </div>
 <p>
     @Html.ActionLink("Back to List", "Index","Products", new { @class = "btn btn-default" })

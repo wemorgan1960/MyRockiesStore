@@ -10,40 +10,80 @@
 @using (Html.BeginForm("AddToCart", "Products", FormMethod.Post, new { encType = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
-        <h4>Product</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         @Html.HiddenFor(model => model.Product.Id)
 
-        <div class="col-md-2">
-            <img class="img-responsive" src="~/Content/ProductImages/@Model.Product.Image"/>
+        <div class="col-lg-push-4">
+            <img class="img" style="height:400px;padding:5px;margin:5px;border: solid thin whitesmoke" src="~/Content/ProductImages/@Model.Product.Image" ) />
+            <img class="img" style="height:400px;padding:5px;margin:5px;border: solid thin whitesmoke" src="~/Content/ProductImages/@Model.Product.Image2" ) />
+            <dl class="dl-horizontal">
+                <dt>
+                    Study Name
+                </dt>
 
-        </div>
-        <div class="col-md-10">
+                <dd>
+                    @Html.DisplayFor(model => model.Product.Name)
+                </dd>
 
-            <div class="form-group">
-                @Html.LabelFor(model => model.Product.Name, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.DisplayFor(model => model.Product.Name, new { htmlAttributes = new { @class = "form-control" } })
-                </div>
-            </div>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Product.Size)
+                </dt>
 
-            <div class="form-group">
-                @Html.LabelFor(model => model.Product.Price, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    $@Html.DisplayFor(model => model.Product.Price, new { htmlAttributes = new { @class = "form-control" } })
-                </div>
-            </div>
+                <dd>
+                    @Html.DisplayFor(model => model.Product.Size)
+                </dd>
 
-            <div class="form-group">
-                @Html.LabelFor(model => model.Product.Category, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.DisplayFor(model => model.Product.Category, new { htmlAttributes = new { @class = "form-control" } })
-                </div>
-            </div>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Product.Location)
+                </dt>
 
+                <dd>
+                    @Html.DisplayFor(model => model.Product.Location)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Product.Description)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Product.Description)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Product.Price)
+                </dt>
+
+                <dd>
+                    $@Html.DisplayFor(model => model.Product.Price) ($CDN)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Product.Shipping)
+                </dt>
+
+                <dd>
+                    $@Html.DisplayFor(model => model.Product.Shipping) ($CDN)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Product.ShippingTerms)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Product.ShippingTerms)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Product.Category)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Product.Category)
+                </dd>
+            </dl>
 
             <div class="form-group">
                 <div class="col-md-offset-2 col-md-10">
@@ -54,9 +94,9 @@
     </div>
 }
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
+    <div>
+        @Html.ActionLink("Back to List", "Index", "Products", new { @class = "btn btn-default" })
+    </div>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")

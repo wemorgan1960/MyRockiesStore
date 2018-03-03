@@ -94,19 +94,19 @@ namespace Store.WebUI.Controllers
                 //Email Customer
                 string CustomerEmail = User.Identity.Name; ;
 
-                var subject = "Store.com Order has been Answered: " + orderItem.OrderId;
-                var fromAddress = "admin@askyourmechanicdon.com";
+                var subject = "Shop.MyRockies.Network you Order has been Shipped: " + orderItem.OrderId;
+                var fromAddress = "admin@myrockies.network";
                 var toAddress = CustomerEmail;
                 var emailBody = "Email From: Store.com Message: the answer to your order: ";
 
 
                 var smtp = new SmtpClient();
                 {
-                    smtp.Host = "smtp.askyourmechanicdon.com";
+                    smtp.Host = "smtp.myrockies.network";
                     smtp.Port = 587;
                     smtp.EnableSsl = false;
                     smtp.DeliveryMethod = System.Net.Mail.SmtpDeliveryMethod.Network;
-                    smtp.Credentials = new NetworkCredential("admin@askyourmechanicdon.com", "TtLUVAz5");
+                    smtp.Credentials = new NetworkCredential("admin@myrockies.network", "bdFawHs7");
                     smtp.Timeout = 20000;
                 }
 

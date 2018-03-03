@@ -71,22 +71,18 @@ namespace Store.Services
             if(productId != null)
             {
                 Basket basket = GetBasket(httpContext, true);
-                //BasketItem item = basket.BasketItems.FirstOrDefault(i => i.ProductId == productId);
-
-                //if (item == null)
-                //{
                 BasketItem item = new BasketItem()
                     {
                         BasketId = basket.Id,
                         ProductId = productId,
                         Quanity = 1
+
                     };
                     basket.BasketItems.Add(item);
-                //}
-                //else
-                //{
-                //    item.Quanity = item.Quanity + 1;
-                //}
+                    Product product = productContext.Find(productId);
+                    product.PendingSold = true;
+                    productContext.Commit();
+
                 basketContext.Commit();
 
             }
@@ -96,11 +92,16 @@ namespace Store.Services
         {
             Basket basket = GetBasket(httpContext, true);
             BasketItem item = basket.BasketItems.FirstOrDefault(i => i.Id == itemId);
+            Product product = productContext.Find(item.ProductId);
+
 
             if (item != null)
             {
                 basket.BasketItems.Remove(item);
                 basketContext.Commit();
+
+                product.PendingSold = false;
+                productContext.Commit();
             }
         }
         public List<BasketItemViewModel>GetBasketItems(HttpContextBase httpContext)

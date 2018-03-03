@@ -64,6 +64,22 @@
     <Compile Include="Migrations\201803011725035_ProductModel.Designer.cs">
       <DependentUpon>201803011725035_ProductModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201803011746144_addFalseProductModel.cs" />
+    <Compile Include="Migrations\201803011746144_addFalseProductModel.Designer.cs">
+      <DependentUpon>201803011746144_addFalseProductModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803012125047_keyEmail.cs" />
+    <Compile Include="Migrations\201803012125047_keyEmail.Designer.cs">
+      <DependentUpon>201803012125047_keyEmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803012126398_keyEmail2.cs" />
+    <Compile Include="Migrations\201803012126398_keyEmail2.Designer.cs">
+      <DependentUpon>201803012126398_keyEmail2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803020047532_PendingSold.cs" />
+    <Compile Include="Migrations\201803020047532_PendingSold.Designer.cs">
+      <DependentUpon>201803020047532_PendingSold.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SQLRepository.cs" />
@@ -94,6 +110,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201803011725035_ProductModel.resx">
       <DependentUpon>201803011725035_ProductModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803011746144_addFalseProductModel.resx">
+      <DependentUpon>201803011746144_addFalseProductModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803012125047_keyEmail.resx">
+      <DependentUpon>201803012125047_keyEmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803012126398_keyEmail2.resx">
+      <DependentUpon>201803012126398_keyEmail2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803020047532_PendingSold.resx">
+      <DependentUpon>201803020047532_PendingSold.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

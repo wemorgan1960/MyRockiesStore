@@ -89,7 +89,7 @@ namespace Store.WebUI.Controllers
             }
         }
         [HttpPost]
-        public ActionResult Edit(Product product, string Id, HttpPostedFileBase file,HttpPostedFileBase file2)
+        public ActionResult Edit(Product product, string Id, HttpPostedFileBase file)
         {
             ViewBag.IsIndexHome = false;
             Product productToEdit = context.Find(Id);
@@ -110,11 +110,8 @@ namespace Store.WebUI.Controllers
                     file.SaveAs(Server.MapPath("//Content//ProductImages//") + productToEdit.Image);
                 }
 
-                if (file2 != null)
-                {
-                    productToEdit.Image2 = product.Id + Path.GetExtension(file2.FileName);
-                    file.SaveAs(Server.MapPath("//Content//ProductImages//") + productToEdit.Image2);
-                }
+                productToEdit.Image2 ="IMG_20171203_115742469.jpg";
+                //file.SaveAs(Server.MapPath("//Content//ProductImages//") + productToEdit.Image2);
 
                 productToEdit.Name = product.Name;
                 productToEdit.Size = product.Size;
@@ -124,6 +121,7 @@ namespace Store.WebUI.Controllers
                 productToEdit.Shipping = product.Shipping;
                 productToEdit.ShippingTerms = product.ShippingTerms;
                 productToEdit.Category = product.Category;
+                productToEdit.Sold = product.Sold;
 
                 context.Commit();
 
